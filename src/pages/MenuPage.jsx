@@ -1,12 +1,13 @@
 import React from "react";
+import AddMenuSection from "../components/AddMenuSection";
 import Menu from "../components/Menu";
-import OrderSection from "../components/OrderSection";
+// import OrderSection from "../components/OrderSection";
 
 function MenuPage() {
   return (
-    <div className="flex items-center justify-center">
+    <div className=" flex flex-col items-center justify-center">
+      <AddMenuSection />
       <Menu />
-      <OrderSection />
     </div>
   );
 }
