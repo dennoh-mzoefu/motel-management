@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import StockList from "../components/StockList";
-import { addStockItem } from "../redux/stockSlice";
+import { addStockBevItem } from "../redux/stockSlice";
 import { ToastContainer, toast } from "react-toastify";
 
 function StockPage() {
@@ -20,7 +20,7 @@ function StockPage() {
     e.preventDefault();
     if (name && quantity && buyingPrice && sellingPrice) {
       dispatch(
-        addStockItem({
+        addStockBevItem({
           name,
           quantity,
           buyingPrice,
