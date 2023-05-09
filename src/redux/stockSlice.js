@@ -1,6 +1,6 @@
 import { createSlice, current } from "@reduxjs/toolkit";
 import { addDoc, updateDoc } from "firebase/firestore";
-import { stockColRef } from "../utils/firebase";
+import { stockBeverageColRef } from "../utils/firebase";
 
 const initialState = {
   stock: [],
@@ -16,13 +16,24 @@ export const stockSlice = createSlice({
         stock: action.payload,
       };
     },
-    addStockItem: (state, action) => {
+    addStockBevItem: (state, action) => {
       console.log(action.payload);
-      addDoc(stockColRef, {
+      addDoc(stockBeverageColRef, {
         quantity: action.payload.quantity,
         name: action.payload.name,
         buyingPrice: action.payload.buyingPrice,
         sellingPrice: action.payload.sellingPrice,
+        time: new Date(),
+      }).then((res) => {
+        console.log(res);
+      });
+    },
+    addStockFoodItem: (state, action) => {
+      console.log(action.payload);
+      addDoc(stockFoodColRef, {
+        quantity: action.payload.quantity,
+        name: action.payload.name,
+        buyingPrice: action.payload.buyingPrice,
         time: new Date(),
       }).then((res) => {
         console.log(res);
@@ -37,5 +48,6 @@ export const stockSlice = createSlice({
   },
 });
 
-export const { fetchStock, addStockItem, addQuantity } = stockSlice.actions;
+export const { fetchStock, addStockBevItem, addQuantity, addStockFoodItem } =
+  stockSlice.actions;
 export default stockSlice.reducer;
