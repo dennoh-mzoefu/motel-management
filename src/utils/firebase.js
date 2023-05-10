@@ -25,6 +25,9 @@ export const db = getFirestore(app);
 
 // collection ref
 export const usersColRef = collection(db, "users");
-export const menuColRef = collection(db, "menu");
+export const menuFoodColRef = collection(db, "menuFood");
 export const employeeColRef = collection(db, "employee");
-export const stockColRef = collection(db, "stock");
+export const stockBeverageColRef = collection(db, "stockBeverages");
+export const stockFoodColRef = collection(db, "stockFood");
+export const salesColRef = collection(db, "sales");
+export const ordersColRef = collection(db, "orders");
