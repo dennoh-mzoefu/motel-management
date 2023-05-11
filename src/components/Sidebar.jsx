@@ -84,7 +84,7 @@ function Sidebar({ activeMenu, setActiveMenu, screenSize, setScreenSize }) {
 
             <Link
               onClick={() => setActiveMenu((prevState) => !prevState)}
-              to="/ordermanager"
+              to="/purchasespage"
             >
               <div className="w-52 flex  items-center justify-center py-3 hover:text-white  hover:bg-stone-400">
                 <div className="w-3/4 flex  items-center justify-items-start   ">
@@ -95,9 +95,7 @@ function Sidebar({ activeMenu, setActiveMenu, screenSize, setScreenSize }) {
                       setActiveMenu((prevActiveMenu) => !prevActiveMenu)
                     }
                   />
-                  <h3 className="ml-4 font-semibold text-white ">
-                    Order Manager
-                  </h3>
+                  <h3 className="ml-4 font-semibold text-white ">Purchases</h3>
                 </div>
               </div>
             </Link>
@@ -172,6 +170,25 @@ function Sidebar({ activeMenu, setActiveMenu, screenSize, setScreenSize }) {
                     />
                     <h3 className="ml-4 font-semibold text-white">
                       Expense Report
+                    </h3>
+                  </div>
+                </div>
+              </Link>
+              <Link
+                onClick={() => setActiveMenu((prevState) => !prevState)}
+                to="/employeeanalysis"
+              >
+                <div className="w-52 flex  items-center justify-center py-3 hover:text-white  hover:bg-stone-400">
+                  <div className="w-3/4 flex  items-center justify-items-start   ">
+                    {/* icon  */}
+                    <TbZoomMoney
+                      className="text-xl text-white "
+                      onClick={() =>
+                        setActiveMenu((prevActiveMenu) => !prevActiveMenu)
+                      }
+                    />
+                    <h3 className="ml-4 font-semibold text-white">
+                      Employee Analysis
                     </h3>
                   </div>
                 </div>
