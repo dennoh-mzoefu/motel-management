@@ -5,6 +5,9 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import MenuPage from "./pages/MenuPage";
 import { Route, Routes } from "react-router-dom";
 import StockPage from "./pages/StockPage";
+import Sales from "./pages/Sales";
+import EmployeeAnalysis from "./pages/EmployeeAnalysis";
+import PurchasesPage from "./pages/PurchasesPage";
 // import { auth } from "../utils/firebase";
 
 function PostApp() {
@@ -46,6 +49,9 @@ function PostApp() {
         <Routes>
           <Route path="/" element={<MenuPage />} />
           <Route path="/stockManager" element={<StockPage />} />
+          <Route path="/sales" element={<Sales />} />
+          <Route path="/employeeanalysis" element={<EmployeeAnalysis />} />
+          <Route path="/purchasespage" element={<PurchasesPage />} />
         </Routes>
       </div>
     </div>
