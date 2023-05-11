@@ -60,7 +60,7 @@ function PreApp() {
     console.log({ sales });
     dispatch(fetchSales(sales));
   }, [sales]);
-  return <div>PreApp</div>;
+  return <div></div>;
 }
 
 export default PreApp;
