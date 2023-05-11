@@ -6,7 +6,7 @@ import PreApp from "./PreApp";
 function App() {
   return (
     <div>
-      <PreApp className="w-0 h-0 " />
+      <PreApp className="w-0 h-0 z-20 " />
       <PostApp />
     </div>
   );
